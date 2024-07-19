@@ -23,7 +23,7 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @ContextConfiguration(initializers = {PostgreSQLContainerInitializer.class})
-@Sql(value = "/it-data-2.sql", executionPhase = BEFORE_TEST_CLASS)
+@Sql(value = "classpath:/it-data-2.sql", executionPhase = BEFORE_TEST_CLASS)
 @QuickPerfTest
 public abstract class IntegrationTestWithUserInfo {
 
