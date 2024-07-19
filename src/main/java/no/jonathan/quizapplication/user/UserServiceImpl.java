@@ -6,15 +6,17 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {
-    private final UserRepository userRepository;
+  private final UserRepository userRepository;
 
-    public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+  public UserServiceImpl(UserRepository userRepository) {
+    this.userRepository = userRepository;
+  }
 
-    @Override
-    public UserDetailsService userDetailsService() {
-        return username -> userRepository.findByEmail(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-    }
+  @Override
+  public UserDetailsService userDetailsService() {
+    return username ->
+        userRepository
+            .findByEmail(username)
+            .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+  }
 }

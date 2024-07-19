@@ -1,5 +1,6 @@
 package no.jonathan.quizapplication.exception;
 
+import java.util.List;
 import no.jonathan.quizapplication.response.Response;
 import no.jonathan.quizapplication.response.ResponseErrorDto;
 import no.jonathan.quizapplication.response.ResponseUtil;
@@ -8,8 +9,6 @@ import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.multipart.MaxUploadSizeExceededException;
-
-import java.util.List;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {

@@ -1,12 +1,10 @@
 package no.jonathan.quizapplication.quiz;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.validation.Valid;
 import java.io.IOException;
 import java.util.UUID;
 import no.jonathan.quizapplication.response.Response;
 import no.jonathan.quizapplication.response.ResponseUtil;
-import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PagedModel;

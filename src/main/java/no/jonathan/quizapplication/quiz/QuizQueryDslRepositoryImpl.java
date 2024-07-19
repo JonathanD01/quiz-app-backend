@@ -3,21 +3,16 @@ package no.jonathan.quizapplication.quiz;
 import static no.jonathan.quizapplication.quiz.QuizRepositoryCustom.Specifications.*;
 
 import com.querydsl.core.QueryResults;
-import com.querydsl.core.types.EntityPath;
 import com.querydsl.jpa.JPQLQuery;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-
+import jakarta.persistence.Query;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-
-import jakarta.persistence.Query;
-import jakarta.transaction.Transactional;
 import no.jonathan.quizapplication.quizansweroption.QQuizAnswerOption;
 import no.jonathan.quizapplication.quizattempt.QQuizAttempt;
-import no.jonathan.quizapplication.quizattempt.QQuizUserAnswer;
-import no.jonathan.quizapplication.quizattempt.QuizAttempt;
 import no.jonathan.quizapplication.quizquestion.QQuizQuestion;
 import no.jonathan.quizapplication.shared.Hibernate6QuerydslRepositorySupport;
 import no.jonathan.quizapplication.shared.QuizDtoMapper;

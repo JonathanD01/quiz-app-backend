@@ -1,5 +1,7 @@
 package no.jonathan.quizapplication.quizansweroption;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import no.jonathan.quizapplication.IntegrationTestWithUserInfo;
 import no.jonathan.quizapplication.response.ResponseType;
 import org.junit.jupiter.api.DisplayName;
@@ -9,8 +11,6 @@ import org.quickperf.sql.annotation.ExpectInsert;
 import org.quickperf.sql.annotation.ExpectSelect;
 import org.quickperf.sql.annotation.ExpectUpdate;
 import org.springframework.http.HttpHeaders;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class QuizAnswerOptionIntegrationTest extends IntegrationTestWithUserInfo {
 

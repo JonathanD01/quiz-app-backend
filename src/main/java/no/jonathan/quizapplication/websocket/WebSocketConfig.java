@@ -63,7 +63,8 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
               String token = authorizationHeader.substring(7);
 
               String username = jwtService.extractUsername(token);
-              UserDetails userDetails = userService.userDetailsService().loadUserByUsername(username);
+              UserDetails userDetails =
+                  userService.userDetailsService().loadUserByUsername(username);
               UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
                   new UsernamePasswordAuthenticationToken(
                       userDetails, null, userDetails.getAuthorities());

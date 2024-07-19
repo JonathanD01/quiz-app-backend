@@ -25,7 +25,8 @@ public class QuizUserAnswerDeserializer extends JsonDeserializer<Set<QuizUserAns
     while (jsonNodeElements.hasNext()) {
       var jsonNodeElement = jsonNodeElements.next();
       Long quizQuestionId = mapper.convertValue(jsonNodeElement.get("quizQuestionId"), Long.class);
-      Set<Long> quizAnswerOptionIds = mapper.convertValue(jsonNodeElement.get("quizAnswerOptionIds"), new TypeReference<>() {});
+      Set<Long> quizAnswerOptionIds =
+          mapper.convertValue(jsonNodeElement.get("quizAnswerOptionIds"), new TypeReference<>() {});
 
       QuizUserAnswer answer = new QuizUserAnswer(quizQuestionId, quizAnswerOptionIds);
       answers.add(answer);

@@ -4,6 +4,5 @@ import org.springframework.core.io.Resource;
 
 public interface IQuizGeneratorBot {
 
-    QuizFromAi getQuizAiFromChatBot(String language, Resource resource);
-
+  QuizFromAi getQuizAiFromChatBot(String language, Resource resource);
 }

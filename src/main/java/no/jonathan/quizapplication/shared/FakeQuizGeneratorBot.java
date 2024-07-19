@@ -1,18 +1,9 @@
 package no.jonathan.quizapplication.shared;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.StringJoiner;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.document.Document;
-import org.springframework.ai.reader.TextReader;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.ParameterizedTypeReference;
+import java.io.IOException;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
-import org.springframework.stereotype.Component;
 
 public class FakeQuizGeneratorBot implements IQuizGeneratorBot {
 

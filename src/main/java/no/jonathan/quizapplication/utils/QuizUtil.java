@@ -1,11 +1,10 @@
 package no.jonathan.quizapplication.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
-
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
+import java.io.IOException;
 import no.jonathan.quizapplication.quiz.Quiz;
 import no.jonathan.quizapplication.quiz.QuizModuleApi;
 import no.jonathan.quizapplication.quiz.Status;
@@ -14,7 +13,6 @@ import no.jonathan.quizapplication.quizquestion.QuizQuestion;
 import no.jonathan.quizapplication.shared.*;
 import no.jonathan.quizapplication.websocket.WebSocketMessageResponse;
 import no.jonathan.quizapplication.websocket.WebSocketQuizResponse;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Async;
@@ -28,7 +26,7 @@ public class QuizUtil {
   private final IQuizGeneratorBot quizGeneratorBot;
 
   @PersistenceContext
-  private EntityManager entityManager;
+  private final EntityManager entityManager;
 
   public QuizUtil(
           QuizModuleApi quizModuleApi,

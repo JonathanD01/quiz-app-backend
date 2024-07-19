@@ -30,7 +30,7 @@ spring:
     mock: false
     openai:
       api-key: ${OPENAI_API_KEY}
-      chat.options.model: gpt-3.5-turbo-0125
+      chat.options.model: gpt-4o-mini
   threads:
     virtual:
       enabled: true

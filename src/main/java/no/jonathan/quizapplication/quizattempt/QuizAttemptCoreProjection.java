@@ -1,7 +1,6 @@
 package no.jonathan.quizapplication.quizattempt;
 
 import com.querydsl.core.annotations.QueryProjection;
-
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -14,7 +13,8 @@ public class QuizAttemptCoreProjection {
   public LocalDateTime createdAt;
 
   @QueryProjection
-  public QuizAttemptCoreProjection(Long id, UUID link, String title, String description, LocalDateTime createdAt) {
+  public QuizAttemptCoreProjection(
+      Long id, UUID link, String title, String description, LocalDateTime createdAt) {
     this.id = id;
     this.link = link;
     this.title = title;

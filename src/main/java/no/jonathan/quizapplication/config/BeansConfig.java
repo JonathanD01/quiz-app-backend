@@ -6,7 +6,6 @@ import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
@@ -46,7 +45,7 @@ public class BeansConfig {
     return new QuizAttemptDtoMapper(quizDtoMapper(), userDtoMapper());
   }
 
-  @Bean(name = "quizGeneratorBot")
+  @Bean("quizGeneratorBot")
   public IQuizGeneratorBot quizGeneratorBot(ChatClient.Builder builder) {
     if (mockQuizGeneratorBot) {
       return new FakeQuizGeneratorBot();

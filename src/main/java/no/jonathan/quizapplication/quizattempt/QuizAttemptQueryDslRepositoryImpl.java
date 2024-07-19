@@ -99,7 +99,7 @@ public class QuizAttemptQueryDslRepositoryImpl extends Hibernate6QuerydslReposit
                     quizAttemptTable.quiz.description,
                     quizAttemptTable.createdAt))
             .where(hasEmail(email).and(hasTitle(title)))
-                .leftJoin(quizAttemptTable.quiz)
+            .leftJoin(quizAttemptTable.quiz)
             .orderBy(orderByCreatedAtDesc());
 
     query = super.getQuerydsl().applyPagination(pageable, query);

@@ -42,7 +42,9 @@ class QuizQuestionQueryDslRepositoryImpl extends Hibernate6QuerydslRepositorySup
     // https://thorben-janssen.com/avoid-cascadetype-delete-many-assocations/#problems-with-cascadetyperemove-for-tomany-associations
 
     // Remove quiz answer options
-    Query q = entityManager.createNativeQuery("DELETE FROM quiz_answer_options qao WHERE qao.quiz_question_id = (:id)");
+    Query q =
+        entityManager.createNativeQuery(
+            "DELETE FROM quiz_answer_options qao WHERE qao.quiz_question_id = (:id)");
     q.setParameter("id", quizQuestion.getId());
     q.executeUpdate();
 

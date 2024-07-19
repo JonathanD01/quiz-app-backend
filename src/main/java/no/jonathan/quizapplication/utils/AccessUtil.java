@@ -1,7 +1,6 @@
 package no.jonathan.quizapplication.utils;
 
 import no.jonathan.quizapplication.exception.NoPermissionException;
-import no.jonathan.quizapplication.user.User;
 import no.jonathan.quizapplication.user.UserRole;
 import org.springframework.security.core.Authentication;
 
@@ -17,7 +16,6 @@ public class AccessUtil {
     if (authentication == null) {
       throw new NoPermissionException();
     }
-
 
     boolean wasEntityCreatedAnonymously = createdByEmail == null;
     if (wasEntityCreatedAnonymously) {

@@ -2,11 +2,10 @@ package no.jonathan.quizapplication.quizattempt;
 
 import com.querydsl.core.types.OrderSpecifier;
 import com.querydsl.core.types.dsl.BooleanExpression;
+import com.querydsl.core.types.dsl.Expressions;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.UUID;
-
-import com.querydsl.core.types.dsl.Expressions;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
