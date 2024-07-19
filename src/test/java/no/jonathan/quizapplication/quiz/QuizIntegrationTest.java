@@ -1,7 +1,5 @@
 package no.jonathan.quizapplication.quiz;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.io.IOException;
 import java.util.UUID;
 import no.jonathan.quizapplication.IntegrationTestWithUserInfo;
@@ -168,7 +166,7 @@ class QuizIntegrationTest extends IntegrationTestWithUserInfo {
   @ExpectMaxSelect(4)
   void canCreateQuizWithAI() throws IOException {
     // Given
-    ClassPathResource file = new ClassPathResource("cchocolate_quiz.txt");
+    ClassPathResource file = new ClassPathResource("chocolate_quiz.txt");
     String language = "french";
 
     String token =
