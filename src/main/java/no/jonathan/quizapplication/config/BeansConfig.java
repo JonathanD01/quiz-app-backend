@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.task.TaskExecutor;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 @Configuration
 public class BeansConfig {
@@ -51,5 +53,16 @@ public class BeansConfig {
     }
 
     return new QuizGeneratorBot(builder);
+  }
+
+  @Bean("taskExecutor")
+  public TaskExecutor taskExecutor() {
+    ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
+    threadPoolTaskExecutor.setThreadNamePrefix("AsyncTaskExecutor-");
+    threadPoolTaskExecutor.setCorePoolSize(2);
+    threadPoolTaskExecutor.setMaxPoolSize(10);
+    threadPoolTaskExecutor.setQueueCapacity(20);
+    threadPoolTaskExecutor.setKeepAliveSeconds(120);
+    return threadPoolTaskExecutor;
   }
 }
