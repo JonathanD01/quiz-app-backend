@@ -1,0 +1,64 @@
+cors:
+  allowed-origins: http://localhost:3000
+  allowed-methods: "*"
+  allowed-headers: "*"
+  exposed-headers: "*"
+
+jwt:
+  secret-key: "eyJhbGciOiJIUzI1NiJ9eyJSb2xlIjoCJVc2VybmFtZfQDc63o7pZD8tFVCI4xK7o2XwZgIRWZusciu1EbKbs"
+  expiration: 86400000
+
+ai:
+  max-length: 18000
+
+# actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["prometheus"]
+
+spring:
+  config:
+    import: optional:classpath:.env[.properties]
+  application:
+    name: quiz-api
+  servlet:
+    multipart.max-file-size: 200KB
+    multipart.max-request-size: 200KB
+  ai:
+    mock: false
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat.options.model: gpt-3.5-turbo-0125
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5431/quiz-db
+    username: "admin"
+    password: "admin"
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: always
+
+
+resilience4j:
+  ratelimiter:
+    instances:
+      quiz-ai-service:
+        limit-for-period: 2
+        limit-refresh-period: 1h
+        timeout-duration: 1s
+        register-health-indicator: true
+
+logging.level.org.hibernate.orm.jdbc.bind: trace

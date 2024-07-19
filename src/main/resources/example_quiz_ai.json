@@ -1,0 +1,111 @@
+{
+  "quizTitle": "Test Your Java Knowledge",
+  "quizDescription": "This quiz will test your knowledge of the Java programming language.",
+  "questionByAiList": [
+    {
+      "questionText": "Which of the following are valid primitive data types in Java?",
+      "quizAnswerOptionFromAis": [
+        {
+          "answerOptionText": "int",
+          "correct": true
+        },
+        {
+          "answerOptionText": "float",
+          "correct": true
+        },
+        {
+          "answerOptionText": "string",
+          "correct": false
+        },
+        {
+          "answerOptionText": "boolean",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "questionText": "What is the keyword used to define a class in Java?",
+      "quizAnswerOptionFromAis": [
+        {
+          "answerOptionText": "class",
+          "correct": true
+        },
+        {
+          "answerOptionText": "Class",
+          "correct": false
+        },
+        {
+          "answerOptionText": "clazz",
+          "correct": false
+        },
+        {
+          "answerOptionText": "klass",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "questionText": "Which of the following are control flow statements in Java?",
+      "quizAnswerOptionFromAis": [
+        {
+          "answerOptionText": "if",
+          "correct": true
+        },
+        {
+          "answerOptionText": "for",
+          "correct": true
+        },
+        {
+          "answerOptionText": "switch",
+          "correct": true
+        },
+        {
+          "answerOptionText": "while",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "questionText": "What is the default value of a boolean variable in Java?",
+      "quizAnswerOptionFromAis": [
+        {
+          "answerOptionText": "true",
+          "correct": false
+        },
+        {
+          "answerOptionText": "false",
+          "correct": false
+        },
+        {
+          "answerOptionText": "0",
+          "correct": false
+        },
+        {
+          "answerOptionText": "null",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "questionText": "Which of the following are access modifiers in Java?",
+      "quizAnswerOptionFromAis": [
+        {
+          "answerOptionText": "public",
+          "correct": true
+        },
+        {
+          "answerOptionText": "private",
+          "correct": true
+        },
+        {
+          "answerOptionText": "protected",
+          "correct": true
+        },
+        {
+          "answerOptionText": "default",
+          "correct": true
+        }
+      ]
+    }
+  ]
+}
